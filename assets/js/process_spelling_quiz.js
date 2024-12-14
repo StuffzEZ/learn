@@ -58,7 +58,7 @@ if (q7.toLowerCase() == "synagogue") {
     checked += 1;
 }
 
-if (q8.toLowerCase() == "anthropomorphize") {
+if (q8.toLowerCase() == "anthropomorphise") {
     correct += 1;
     score += 4;
     checked += 1;
