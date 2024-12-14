@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stuffzez.github.io/Coding/assets/css/main.css">
+    <script>
+document.addEventListener('DOMContentLoaded', function () {
+    const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const score = urlParams.get('score');
+    const rank = urlParams.get('rank');
+    const correct = urlParams.get('correct');
+    const impossible = urlParams.get('impossible');
+    let impossible2 = "No";  // Default value
+
+    if (impossible === "1") {
+        impossible2 = "Yes";
+    }
+
+    console.log(correct);
+
+    // Ensure the elements are available before accessing them
+    document.getElementById('qcorrect').innerHTML = 'Questions Correct: ' + correct;
+    document.getElementById('qscore').innerHTML = 'Score: ' + score;
+    document.getElementById('qrank').innerHTML = 'Rank: ' + rank;
+    document.getElementById('qimpossible').innerHTML = 'Hardest Spelling Correct?: ' + impossible2;
+    document.getElementById('accesscode').innerHTML = 'Access/Login Code: Not Available Right Now';
+});
+
+    </script>
+    <title>Quiz Results | stuffzez.github.io</title>
+</head>
+<body>
+    <h1>Your Results Are In...</h1>
+    <br>
+    <p id="qcorrect">Questions Correct: NIL</p>
+    <p id="qscore">Score: NIL (View Scoring Below)</p>
+    <p id="qrank">Rank: NIL</p>
+    <p id="qimpossible">Hardest Spelling Correct?: NIL</p>
+    <p id="accesscode">Access/Login Code: NIL</p>
+    <br>
+    <h2>Scoring</h2>
+    <p>Computer - 0.5</p>
+    <p>Optimistic - 1.25</p>
+    <p>Buoy - 2</p>
+    <p>Pacifist - 1.25</p>
+    <p>Simplification - 1.75</p>
+    <p>Synagogue - 2.25</p>
+    <p>Bicycle - 1</p>
+    <p>Anthropomorphize - 4</p>
+</body>
+</html>
