@@ -98,7 +98,7 @@ if (checked == 8) {
     window.location.reload();
 }
 
-if (score >= 0) {
+if (score >= 0 || score === 0.25 || score === 0.75 || score === 0.5) {
     accesscode += 1 // 1
     if (score >= 3) {
         accesscode += 1 // 2
