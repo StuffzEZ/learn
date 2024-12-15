@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const rank = urlParams.get('rank');
     const correct = urlParams.get('correct');
     const impossible = urlParams.get('impossible');
+    const accesscode = urlParams.get('accesscode');
     let impossible2 = "No";  // Default value
 
     if (impossible === "1") {
@@ -25,7 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('qscore').innerHTML = 'Score: ' + score;
     document.getElementById('qrank').innerHTML = 'Rank: ' + rank;
     document.getElementById('qimpossible').innerHTML = 'Hardest Spelling Correct?: ' + impossible2;
-    document.getElementById('accesscode').innerHTML = 'Access/Login Code: Not Available Right Now';
+    document.getElementById('accesscode').innerHTML = 'Access/Login Code: ' + accesscode;
 });
 
     </script>

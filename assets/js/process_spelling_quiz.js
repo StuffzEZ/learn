@@ -15,6 +15,8 @@ let score = 0;
 let rank = 0;
 let checked = 0;
 let impossiblecorrect = 0;
+let accesscode = 0;
+let finalcode = 0;
 
 if (q1.toLowerCase() == "computer") {
     correct += 1;
@@ -96,6 +98,35 @@ if (checked == 8) {
     window.location.reload();
 }
 
-const results = "https://stuffzez.github.io/learn/spelling/quiz_results?score=" + score + "&rank=" + rank + "&correct=" + correct + "&impossible=" + impossiblecorrect;
+if (score >= 0) {
+    accesscode += 1 // 1
+    if (score >= 3) {
+        accesscode += 1 // 2
+        if (score >= 6) {
+            accesscode += 1 // 3
+            if (score === 9) {
+                accesscode += 1 // 4
+            }
+        }
+    }
+}
+
+if (accesscode === 1) {
+    finalcode = 1001
+} else {
+    if (accesscode === 2) {
+        finalcode = 2001
+    } else {
+        if (accesscode === 3) {
+            finalcode = 3001
+        } else {
+            if (accesscode === 4) {
+                finalcode = 4001
+            }
+        }
+    }
+}
+
+const results = "https://stuffzez.github.io/learn/spelling/quiz_results?score=" + score + "&rank=" + rank + "&correct=" + correct + "&impossible=" + impossiblecorrect + "&accesscode=" + finalcode;
 
 window.location.replace(results);
