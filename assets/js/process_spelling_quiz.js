@@ -112,16 +112,16 @@ if (score >= 0 || score === 0.25 || score === 0.75 || score === 0.5) {
 }
 
 if (accesscode === 1) {
-    finalcode = 1001
+    finalcode = 31001
 } else {
     if (accesscode === 2) {
-        finalcode = 2001
+        finalcode = 32001
     } else {
         if (accesscode === 3) {
-            finalcode = 3001
+            finalcode = 33101
         } else {
             if (accesscode === 4) {
-                finalcode = 4001
+                finalcode = 34101
             }
         }
     }

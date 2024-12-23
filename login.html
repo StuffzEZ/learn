@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stuffzez.github.io/Coding/assets/css/main.css">
+    <title>Login | stuffzez.github.io (Learn)</title>
+    <style>
+        body {
+            text-align: center;
+        }
+    </style>
+    <script>
+        function login() {
+            var accesscode = document.getElementById("accesscodeinput").value; // Use .value instead of .innerHTML
+            console.log(accesscode);
+            var url = 'https://stuffzez.github.io/learn/l';
+            var combinedurl = url + accesscode;
+            window.location.replace(combinedurl);
+        }
+    </script>
+</head>
+<body>
+    <h1>Please Enter Your Access Code To Continue!</h1>
+    <input type="text" id="accesscodeinput">
+    <input type="button" onclick="login()" value="Login!">
+    <br>
+    <p>NOTE: This Is Not A Secure Login - It Is Just A Quick Way To Jump To The Lesson You Are Currently Learning.</p>
+</body>
+</html>
